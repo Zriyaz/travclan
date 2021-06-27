@@ -17,7 +17,7 @@ html{
 .table-heading{
  
   display: flex;
-  min-width: 550px;
+  min-width: 350px;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
@@ -29,7 +29,6 @@ html{
   letter-spacing: 1px;
 
 }
-
 .user-list{
   width: 100%;
   display: flex;
@@ -58,6 +57,28 @@ html{
     flex-direction: column;
   }
 }
+
+
+/* =============PROFILE COMPONENTS========================= */
+.user-profile_container{
+  min-width:  350;
+  background: rgb(10, 193, 206);
+  /* height: 400px; */
+}
+
+.profile-info{ 
+ display: flex;
+ justify-content:space-between;
+ padding: 10px;
+}
+
+.profile-img img{
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgb(161, 9, 141);
+}
+
+
 
 
 /* =============PAGINATION COMPONENT========================= */

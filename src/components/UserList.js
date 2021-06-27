@@ -8,6 +8,7 @@ const UserList = () => {
   const { state } = useContext(Context);
   const { user } = state;
   const [users, setUsers] = useState(user);
+  const [profileData, setProfileData] = useState(users[0]);
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 5;
@@ -29,7 +30,7 @@ const UserList = () => {
         {users && users.length > 0 ? (
           <>
             {displayUsers.map((data) => (
-              <List data={data} />
+              <List data={data} setProfileData={setProfileData} />
             ))}
             <div className="paginationContainer">
               <ReactPaginate
@@ -52,9 +53,9 @@ const UserList = () => {
         )}
       </div>
 
-      {/* <div className="user-profile_container">
+      <div className="user-profile_container">
         <UserProfile profileData={profileData} />
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Switch from "@material-ui/core/Switch";
 
-const List = ({ data }) => {
-  const [profileData, setProfileData] = useState();
-  const [bidsAmount, setBidsAmount] = useState("");
+const List = ({ data, setProfileData }) => {
   const [selected, setSelected] = React.useState({
     checkedA: true,
     checkedB: true,
