@@ -8,7 +8,8 @@ import IconButton from "@material-ui/core/IconButton";
 
 import { Context } from "./context";
 import Logo from "./assets/logo.png";
-
+import Loader from "./components/Loading";
+import UserList from "./components/UserList";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
   const classes = useStyles();
   const { state, dispatch } = useContext(Context); // Accessing Global State of the Application using useContext hook, It returns the application state as well as dispatch to update the global state.
+  const { user } = state;
 
   // First application render in the DOM useEffect hook will execute and fetch data from remote server
   useEffect(() => {
@@ -40,8 +42,6 @@ const App = () => {
         res.json().then((data) => dispatch({ type: "GET_DATA", payload: data })) // After fetched data from remote server dispatch the action called "GET_DATA" and  It will store data in global store of the application and accessible in all components.
     );
   }, []);
-
-  console.log("Data", state);
   return (
     <div>
       <AppBar position="static" className={classes.navBackground}>
@@ -57,6 +57,7 @@ const App = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <div>{user ? <UserList users={user} /> : <Loader />}</div>
     </div>
   );
 };
