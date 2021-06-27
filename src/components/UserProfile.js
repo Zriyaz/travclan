@@ -1,11 +1,8 @@
 import React from "react";
 
-const UserProfile = () => {
-  return (
-    <div>
-      <h1>user profile</h1>
-    </div>
-  );
+const UserProfile = ({ profileData }) => {
+  console.log("Profile Data", profileData);
+  return <div className=""></div>;
 };
 
 export default UserProfile;

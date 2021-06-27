@@ -57,7 +57,7 @@ const App = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div>{user ? <UserList users={user} /> : <Loader />}</div>
+      <div>{user ? <UserList /> : <Loader />}</div>
     </div>
   );
 };

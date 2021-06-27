@@ -7,3 +7,54 @@
 html{
   font-family: 'Titillium Web', sans-serif;
 }
+
+.container{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-heading{
+ 
+  display: flex;
+  min-width: 550px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  height: 70px;
+  background: red;
+}
+
+.table-heading h3{
+  letter-spacing: 1px;
+
+}
+
+.user-list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 60px;
+  background-color: rgb(102, 102, 211);
+  padding: 0 5px;
+}
+
+.user-list:hover{
+  background: #fff
+}
+
+.bid_amount{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+
+}
+
+@media screen and (max-width:500px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+}
