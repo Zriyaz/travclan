@@ -42,7 +42,7 @@ const App = () => {
       (res) =>
         res.json().then((data) => dispatch({ type: "GET_DATA", payload: data })) // After fetched data from remote server dispatch the action called "GET_DATA" and  It will store data in global store of the application and accessible in all components.
     );
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
