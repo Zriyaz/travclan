@@ -12,11 +12,9 @@ const List = ({ data }) => {
   const handleChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.checked });
   };
-
   //   useEffect(() => {
   //     data && console.log(console.log("Bid Amount", data));
   //   }, []);
-
   const maxBidsAmount = (bids) => {
     let maxValue = 0;
     for (let i = 0; i < bids.length; i++) {

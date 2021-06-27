@@ -58,3 +58,40 @@ html{
     flex-direction: column;
   }
 }
+
+
+/* =============PAGINATION COMPONENT========================= */
+.paginationContainer{
+  margin-top: 2rem;
+  display: flex;
+  justify-content:center;
+}
+
+.paginationBttns{
+  width: 80%;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a{
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid red;
+  color: blue;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover{
+  background: blue;
+  color: #fff;
+}
+
+.paginationActive a{
+  background: blue;
+  color: #fff;
+}
+
+
