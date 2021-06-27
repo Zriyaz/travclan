@@ -10,6 +10,7 @@ import { Context } from "./context";
 import Logo from "./assets/logo.png";
 import Loader from "./components/Loading";
 import UserList from "./components/UserList";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -42,6 +43,7 @@ const App = () => {
         res.json().then((data) => dispatch({ type: "GET_DATA", payload: data })) // After fetched data from remote server dispatch the action called "GET_DATA" and  It will store data in global store of the application and accessible in all components.
     );
   }, []);
+
   return (
     <div>
       <AppBar position="static" className={classes.navBackground}>
@@ -58,6 +60,10 @@ const App = () => {
         </Toolbar>
       </AppBar>
       <div>{user ? <UserList /> : <Loader />}</div>
+      <div>
+        <div className="border-line"></div>
+        <h3 className="name">Created by Md Riyaz Ansari</h3>
+      </div>
     </div>
   );
 };

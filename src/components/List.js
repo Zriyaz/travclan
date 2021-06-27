@@ -10,9 +10,7 @@ const List = ({ data, setProfileData }) => {
   const handleChange = (event) => {
     setSelected({ ...selected, [event.target.name]: event.target.checked });
   };
-  //   useEffect(() => {
-  //     data && console.log(console.log("Bid Amount", data));
-  //   }, []);
+
   const maxBidsAmount = (bids) => {
     let maxValue = 0;
     for (let i = 0; i < bids.length; i++) {
@@ -44,8 +42,8 @@ const List = ({ data, setProfileData }) => {
           <h5>Bid Amount</h5>
           <p>
             {selected.checkedA && selected.checkedB
-              ? maxBidsAmount(data.bids)
-              : minBidsAmount(data.bids)}
+              ? ` Max ${maxBidsAmount(data.bids)}`
+              : `Min ${minBidsAmount(data.bids)}`}
           </p>
         </div>
         <Switch

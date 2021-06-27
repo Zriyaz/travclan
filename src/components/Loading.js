@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "80vh",
@@ -9,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
 }));
+
 const Loading = () => {
   const classes = useStyles();
 

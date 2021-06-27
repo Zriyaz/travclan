@@ -8,25 +8,32 @@ html{
   font-family: 'Titillium Web', sans-serif;
 }
 
+.app-heading{
+  letter-spacing:1px;
+  padding: 2rem 0 1rem  5rem;
+  font-size: 23px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .container{
-  margin-top: 5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
 }
 
 .table-heading{
- 
   display: flex;
-  min-width: 350px;
+  min-width: 550px;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
   height: 70px;
-  background: red;
+  background: rgb(240, 183, 145);
+  border-bottom: 2px solid rgb(185, 79, 8);
 }
 
 .table-heading h3{
   letter-spacing: 1px;
+  font-size: 23px;
 
 }
 .user-list{
@@ -36,10 +43,15 @@ html{
   align-items: center;
   cursor: pointer;
   height: 60px;
-  background-color: rgb(102, 102, 211);
+  background-color: rgb(197, 197, 211);
   padding: 0 5px;
 }
 
+.user-list h5{
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: center;
+}
 .user-list:hover{
   background: #fff
 }
@@ -51,18 +63,44 @@ html{
 
 }
 
+@media screen and (max-width:1055px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .table-heading{
+    min-width: 320px;
+  }
+  .app-heading{
+    padding: 2rem 5px ;
+  }
+}
 @media screen and (max-width:500px){
   .container{
     display: flex;
     flex-direction: column;
   }
+  .table-heading{
+    min-width: 320px;
+  }
+  .app-heading{
+    padding: 1rem 5px ;
+  }
 }
 
-
 /* =============PROFILE COMPONENTS========================= */
+.profile-heading{
+  padding: 1rem 0;
+  font-size: 20px;
+  letter-spacing:1px;
+}
 .user-profile_container{
-  min-width:  350;
-  background: rgb(10, 193, 206);
+  margin-top: 10px;
+  min-width:  450px;
+  background: rgb(196, 219, 221);
+  max-height: 200px;
+  box-shadow: 10px 3px 14px 0px rgba(0,0,0,0.75);
+  border-radius: 8px;
   /* height: 400px; */
 }
 
@@ -76,6 +114,29 @@ html{
   width: 120px;
   height: 120px;
   border: 2px solid rgb(161, 9, 141);
+}
+
+@media screen and (max-width:500px){
+
+  .user-profile_container{
+    margin-top: 10px;
+    padding: 1rem 0;
+    min-width: 340px;
+  }
+}
+@media screen and (max-width:1055px){
+
+  .user-profile_container{
+    margin : 10px auto;
+    padding: 1rem 1rem;
+    max-width: 500px;
+  }
+  .profile-heading{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 20px;
+    letter-spacing:1px;
+  }
 }
 
 
@@ -97,22 +158,35 @@ html{
 }
 
 .paginationBttns a{
-  padding: 10px;
+  padding: 6px;
   margin: 8px;
   border-radius: 5px;
-  border: 1px solid red;
-  color: blue;
+  border: 2px solid rgb(170, 44, 44);
+  color: rgb(62, 102, 212);
   cursor: pointer;
+  font-size: 18px;
 }
-
 .paginationBttns a:hover{
-  background: blue;
+  background: rgb(52, 52, 156);
   color: #fff;
 }
 
 .paginationActive a{
-  background: blue;
+  background: rgb(99, 99, 235);
   color: #fff;
 }
 
+.border-line{
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: rgb(159, 159, 161);
+}
+.name{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  color: #394e89;
+}
 
